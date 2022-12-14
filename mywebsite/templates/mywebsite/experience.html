@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Maria Luisa Conforti - Web Site</title>
+<meta charset="UTF-8">
+<meta name="description" content="Curriculum Vitae Maria Luisa Conforti">
+<meta name="keywords" content="curriculum, cv, presentazione, profilo, css, html">
+<meta name="author" content="Maria Luisa Conforti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/sitowebmlc.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ body, h1,h2,h3,h4,h5,h6 {font-family: "Inknut Antiqua"}
+ @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+ @media screen and (min-width: 1200px) {h3, h4, h5, h6, p {font-size: 20px;}}
+ @media screen and (min-width: 800px) {h3, h4, h5, h6, p {font-size: 17px;}}
+ @media screen and (max-width: 800px) {h3, h4, h5, h6, p {font-size: 15px;}}
+ @media screen and (max-width: 600px) {h3, h4, h5, h6, p {font-size: 13px;}}
+ </style>
+</head>
+
+<body>
+
+<!-- Navbar large screens -->
+<nav id="mySidebar">
+ {% load static %}
+  <img  src="{% static 'img/fotoCV.jpeg' %}" id="fotoCV" title="fotoCV" alt="fotoCV">
+  <a href="{% url 'homepage' %}" class="button-sidebar">
+   <i class="fa fa-home icon-sidebar"></i>
+   <p>home</p> 
+  </a>
+  <a href="{% url 'about' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-user icon-sidebar"></i>
+   <p>about</p>
+  </a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-asterisk icon-sidebar"></i>
+   <p>skills </p>
+  </a>
+  <a href="{% url 'education' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-university icon-sidebar"></i>
+   <p>education</p>
+  </a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-briefcase icon-sidebar"></i>
+   <p>experience</p>
+  </a>
+  <a href="{% url 'master' %}" target="_blank" class="button-sidebar"> 
+   <i class="fa fa-cube icon-sidebar"></i>
+   <p>master</p>
+  </a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-envelope icon-sidebar"></i>
+   <p>contact</p>
+  </a>
+</nav>
+
+<!-- Navbar small screens-->
+<div id="myNavbar">
+  <a href="{% url 'homepage' %}" class="button-navbar"><p>home</p></a>
+  <a href="{% url 'about' %}" target="_blank" class="button-navbar"><p>about</p></a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-navbar"><p>skills</p></a>
+  <a href="{% url 'education' %}" target="_blank" class="button-navbar"><p>education</p></a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-navbar"><p>experience</p></a>
+  <a href="{% url 'master' %}" target="_blank" class="button-navbar"><p>master</p></a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-navbar"><p>contacts</p></a>
+</div>
+
+<!-- Page Content -->
+<div id="main">
+ 
+<div class="section content" id="experience">
+  <h2><b>Experience</b></h2>
+   <h6><i class="fa fa-circle-o icon"></i>Scavo archeologico "<a href="https://www.instagram.com/coppanevigata_project/" title="coppanevigata" target="_blank">Coppa Nevigata</a> 2018" (Manfredonia, FG)</h6>
+   <h6><i class="fa fa-circle-o icon"></i><i>Field Survey</i> "<a href="https://www.facebook.com/agerlucerinus/" title="agerlucerinus" target="_blank"><em>Ager Lucerinus</em></a> 2018" (Castelnuovo della Daunia, FG)</h6>
+   <h6><i class="fa fa-circle-o icon"></i>Soprintendenza Archeologica delle Belle Arti e Paesaggio Pisa-Livorno, Scavo archeologico "<a href="https://www.parchivaldicornia.it/parchi-archeologici/parco-archeologico-di-baratti-e-populonia/" title="baratti" target="_blank">Baratti-Populonia</a> 2021"(Baratti, LI)</h6>
+   <h6><i class="fa fa-circle-o icon"></i>Scavo archeologico "<a href="https://site.unibo.it/kainua/it/il-sito/la-storia" title="kainua" target="_blank"><em>Kainua</em>-Marzabotto</a> 2021" (Marzabotto, BO)</h6>
+   <h6><i class="fa fa-circle-o icon"></i>Scavo archeologico "<a href="https://www.tharros.sardegna.it/" title="tharros" target="_blank"><em>Tharros</em></a> 2021" (Cabras, OR)</h6>
+   <h6><i class="fa fa-circle-o icon"></i>Associazione "<a href="https://www.campodellafiera.it/" title="campodellafiera" target="_blank">Campo della Fiera</a> 2017-2022" (Orvieto, TR)</h6>
+    <div class="w3-row-padding">
+     <div class="w3-half">
+      {% load static %}
+       <img src="{% static 'img/s1.jpg' %}" id="imgscavo">
+      {% load static %}
+       <img src="{% static 'img/s2.jpg' %}" id="imgscavo">
+      {% load static %}
+       <img src="{% static 'img/s3.jpg' %}" id="imgscavo">
+     </div>
+	   <div class="w3-half">
+	    {% load static %}
+       <img src="{% static 'img/s4.jpg' %}" id="imgscavo">
+      {% load static %}
+       <img src="{% static 'img/s5.jpg' %}" id="imgscavo">
+      {% load static %}
+       <img src="{% static 'img/s6.jpg' %}" id="imgscavo">
+     </div>
+    </div>
+ </div>
+
+ 
+ <footer class="w3-opacity w3-hover-opacity-off" id="social">
+  <a href="#" class="button-footer"></i>To the top</a>
+   <div class="section">
+    <a href="https://www.facebook.com/MariaLuisaConforti.1" class="item-button" target="_blank"><i class="fa fa-facebook-official"></i></a>
+	<a href="https://www.instagram.com/mlc_1997_/" class="item-button" target="_blank"><i class="fa fa-instagram"></i></a>
+	<a href="https://www.linkedin.com/in/maria-luisa-conforti-5697b2225/" class="item-button" target="_blank"><i class="fa fa-linkedin"></i></a>
+	<a href="https://www.amazon.it/Kindle-Store-Maria-Luisa-Conforti/s?rh=n%3A818937031%2Cp_27%3AMaria+Luisa+Conforti" class="item-button" target="_blank"><i class="fa fa-amazon"></i></a>
+	<a href="https://mlcwebsite.wordpress.com/" class="item-button" target="_blank"><i class="fa fa-wordpress"></i></a>
+   </div>
+ </footer>
+ 
+</div>
+
+</body>
+</html>

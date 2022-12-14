@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Maria Luisa Conforti - Web Site</title>
+<meta charset="UTF-8">
+<meta name="description" content="Curriculum Vitae Maria Luisa Conforti">
+<meta name="keywords" content="curriculum, cv, presentazione, profilo, css, html">
+<meta name="author" content="Maria Luisa Conforti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/sitowebmlc.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ body, h1,h2,h3,h4,h5,h6 {font-family: "Inknut Antiqua"}
+ @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+ @media screen and (min-width: 1200px) {h3, h4, h5, h6, p {font-size: 20px;}}
+ @media screen and (min-width: 800px) {h3, h4, h5, h6, p {font-size: 17px;}}
+ @media screen and (max-width: 800px) {h3, h4, h5, h6, p {font-size: 15px;}}
+ @media screen and (max-width: 600px) {h3, h4, h5, h6, p {font-size: 13px;}}
+ </style>
+</head>
+
+<body>
+
+<!-- Navbar large screens -->
+<nav id="mySidebar">
+ {% load static %}
+  <img  src="{% static 'img/fotoCV.jpeg' %}" id="fotoCV" title="fotoCV" alt="fotoCV">
+  <a href="{% url 'homepage' %}" class="button-sidebar">
+   <i class="fa fa-home icon-sidebar"></i>
+   <p>home</p> 
+  </a>
+  <a href="{% url 'about' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-user icon-sidebar"></i>
+   <p>about</p>
+  </a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-asterisk icon-sidebar"></i>
+   <p>skills </p>
+  </a>
+  <a href="{% url 'education' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-university icon-sidebar"></i>
+   <p>education</p>
+  </a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-briefcase icon-sidebar"></i>
+   <p>experience</p>
+  </a>
+  <a href="{% url 'master' %}" target="_blank" class="button-sidebar"> 
+   <i class="fa fa-cube icon-sidebar"></i>
+   <p>master</p>
+  </a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-envelope icon-sidebar"></i>
+   <p>contact</p>
+  </a>
+</nav>
+
+<!-- Navbar small screens-->
+<div id="myNavbar">
+  <a href="{% url 'homepage' %}" class="button-navbar"><p>home</p></a>
+  <a href="{% url 'about' %}" target="_blank" class="button-navbar"><p>about</p></a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-navbar"><p>skills</p></a>
+  <a href="{% url 'education' %}" target="_blank" class="button-navbar"><p>education</p></a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-navbar"><p>experience</p></a>
+  <a href="{% url 'master' %}" target="_blank" class="button-navbar"><p>master</p></a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-navbar"><p>contacts</p></a>
+</div>
+
+
+<!-- Page Content -->
+<div id="main">
+ 
+ <div class="section content" id="master">
+  <h2><b>Master</b></h2>
+   <div id="comunicazione_storica">
+ 	<ul>
+	 <li>Editoria digitale</li> 
+	 <li>Linguaggi e industrie dell'audiovisivo e del digitale</li>
+	 <li>Modelli 3D e trattamento dei dati</li>
+	 <li>Strumenti di base per la produzione di contenuti web</li>
+	 <li>Teoria e tecnica del documentario storico</li>
+	 <li>Linguaggi della storia</li>
+	 <li>Gestione dei beni artistici e culturali</li>
+	 <li>Didattica digitale della storia</li>
+	 <li>Patrimonio storico e cittadinanza attiva</li>
+	</ul>
+  </div>
+  
+  <h3><b>Projects</b></h3>
+   <h4><b>SketchUp<br>Modelli 3d e trattamento dei dati - D'Addea</b></h4>
+    <div class="w3-row-padding">	
+    <div class="w3-half">
+     {% load static %}
+      <img src="{% static 'img/SU1.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Parco Giochi">
+     {% load static %}
+      <img src="{% static 'img/SU3.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Sedia 1">
+     {% load static %}
+      <img src="{% static 'img/SU5.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Tempio greco - Esterno">   
+	 </div> 
+	 <div class="w3-half">
+    {% load static %}
+      <img src="{% static 'img/SU2.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Pozzo San Giovanni in Monte">
+     {% load static %}
+      <img src="{% static 'img/SU4.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Sedia 2">
+     {% load static %}
+      <img src="{% static 'img/SU6.jpg' %}" id="sketchUp" onclick="onClick(this)" alt="Tempio greco - Interno">   
+	 </div>
+	</div>
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+     <div id="xbutton">×</div>  
+      <div class="content w3-animate-zoom">
+	   <img id="img01" class="w3-image">
+	    <p id="caption"></p>
+      </div>
+    </div>
+	
+   <br>
+	
+   <h4><b>Sito Web<br>Editoria digitale - Tubertini</b></h4>
+    <a href="https://mlcwebsite.wordpress.com/" target="_blank"><h4>mlcwebsite.wordpress.com</h4></a>
+     <div class="mySlides">
+      {% load static %}
+       <img src="{% static 'img/wp1.jpg' %}" id="slide">
+     </div>
+     <div class="mySlides">
+      {% load static %}
+       <img src="{% static 'img/wp2.jpg' %}" id="slide">
+     </div>
+     <div class="mySlides">
+      {% load static %}
+       <img src="{% static 'img/wp3.jpg' %}" id="slide">
+     </div>
+	    
+</div>
+
+ <footer class="w3-opacity w3-hover-opacity-off" id="social">
+  <a href="#" class="button-footer"></i>To the top</a>
+   <div class="section">
+    <a href="https://www.facebook.com/MariaLuisaConforti.1" class="item-button" target="_blank"><i class="fa fa-facebook-official"></i></a>
+	<a href="https://www.instagram.com/mlc_1997_/" class="item-button" target="_blank"><i class="fa fa-instagram"></i></a>
+	<a href="https://www.linkedin.com/in/maria-luisa-conforti-5697b2225/" class="item-button" target="_blank"><i class="fa fa-linkedin"></i></a>
+	<a href="https://www.amazon.it/Kindle-Store-Maria-Luisa-Conforti/s?rh=n%3A818937031%2Cp_27%3AMaria+Luisa+Conforti" class="item-button" target="_blank"><i class="fa fa-amazon"></i></a>
+	<a href="https://mlcwebsite.wordpress.com/" class="item-button" target="_blank"><i class="fa fa-wordpress"></i></a>
+   </div>
+ </footer>
+ 
+</div>
+
+<script>
+ // Image Gallery
+ function onClick(element) {
+ document.getElementById("img01").src = element.src;
+ document.getElementById("modal01").style.display = "block";
+ 
+ var captionText = document.getElementById("caption");
+ captionText.innerHTML = element.alt;
+}
+
+ // Automatic Slideshow 
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000);    
+}
+
+</script>
+
+</body>
+</html>

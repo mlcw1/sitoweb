@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Maria Luisa Conforti - Web Site</title>
+<meta charset="UTF-8">
+<meta name="description" content="Curriculum Vitae Maria Luisa Conforti">
+<meta name="keywords" content="curriculum, cv, presentazione, profilo, css, html">
+<meta name="author" content="Maria Luisa Conforti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/sitowebmlc.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ body, h1,h2,h3,h4,h5,h6 {font-family: "Inknut Antiqua"}
+ @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+ @media screen and (min-width: 1200px) {h3, h4, h5, h6, p {font-size: 20px;}}
+ @media screen and (min-width: 800px) {h3, h4, h5, h6, p {font-size: 17px;}}
+ @media screen and (max-width: 800px) {h3, h4, h5, h6, p {font-size: 15px;}}
+ @media screen and (max-width: 600px) {h3, h4, h5, h6, p {font-size: 13px;}}
+ </style>
+</head>
+
+<body>
+
+<!-- Navbar large screens -->
+<nav id="mySidebar">
+ {% load static %}
+  <img  src="{% static 'img/fotoCV.jpeg' %}" id="fotoCV" title="fotoCV" alt="fotoCV">
+  <a href="{% url 'homepage' %}" class="button-sidebar">
+   <i class="fa fa-home icon-sidebar"></i>
+   <p>home</p> 
+  </a>
+  <a href="{% url 'about' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-user icon-sidebar"></i>
+   <p>about</p>
+  </a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-asterisk icon-sidebar"></i>
+   <p>skills </p>
+  </a>
+  <a href="{% url 'education' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-university icon-sidebar"></i>
+   <p>education</p>
+  </a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-briefcase icon-sidebar"></i>
+   <p>experience</p>
+  </a>
+  <a href="{% url 'master' %}" target="_blank" class="button-sidebar"> 
+   <i class="fa fa-cube icon-sidebar"></i>
+   <p>master</p>
+  </a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-sidebar">
+   <i class="fa fa-envelope icon-sidebar"></i>
+   <p>contact</p>
+  </a>
+</nav>
+
+<!-- Navbar small screens-->
+<div id="myNavbar">
+  <a href="{% url 'homepage' %}" class="button-navbar"><p>home</p></a>
+  <a href="{% url 'about' %}" target="_blank" class="button-navbar"><p>about</p></a>
+  <a href="{% url 'skills' %}" target="_blank" class="button-navbar"><p>skills</p></a>
+  <a href="{% url 'education' %}" target="_blank" class="button-navbar"><p>education</p></a>
+  <a href="{% url 'experience' %}" target="_blank" class="button-navbar"><p>experience</p></a>
+  <a href="{% url 'master' %}" target="_blank" class="button-navbar"><p>master</p></a>
+  <a href="{% url 'contact' %}" target="_blank" class="button-navbar"><p>contacts</p></a>
+</div>
+
+<!-- Page Content -->
+<div id="main">
+ <header id="intestazione">
+  <div class="section">
+   <h1><b>Maria Luisa Conforti</b></h1>
+    <h3><b>Surveys and Archaeological Research</b></h3>
+     {% load static %}
+     <img src="{% static 'img/scavo.jpg' %}" id="scavo" title="scavo" alt="scavo" class="responsive">
+  </div>
+ </header>
+
+ 
+<footer class="w3-opacity w3-hover-opacity-off" id="social">
+  <a href="https://www.facebook.com/MariaLuisaConforti.1" class="item-button" target="_blank"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/mlc_1997_/" class="item-button" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/maria-luisa-conforti-5697b2225/" class="item-button" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.amazon.it/Kindle-Store-Maria-Luisa-Conforti/s?rh=n%3A818937031%2Cp_27%3AMaria+Luisa+Conforti" class="item-button" target="_blank"><i class="fa fa-amazon"></i></a>
+  <a href="https://mlcwebsite.wordpress.com/" class="item-button" target="_blank"><i class="fa fa-wordpress"></i></a>
+ </footer>
+ 
+ 
+</div>
+
+</body>
+</html>
